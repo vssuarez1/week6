@@ -104,8 +104,8 @@ and you may call me V."""
 
 
 # Convert the text to a tuple of characters
-text_tuple = tuple(text)
-print(text_tuple)
+# text_tuple = tuple(text)
+# print(text_tuple)
 
 
 # Tuple to store the target characters
@@ -116,13 +116,13 @@ print(text_tuple)
 
 
 # Count occurrences of 'v' or 'V' by filtering the text_tuple
-small_v = text_tuple.count('v')
-capital_V = text_tuple.count('V')
+# small_v = text_tuple.count('v')
+# capital_V = text_tuple.count('V')
 
 
 # Output the result
-total = small_v + capital_V
-print(total)
+# total = small_v + capital_V
+# print(total)
 
 # dictionarys Accessing a Value from a Nested List###############################
 #Suppose we have a dictionary containing multiple lists as values, and you want to access a specific element from one of these lists.
@@ -134,23 +134,32 @@ sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(len(sample_list)) # Output: 3
 #this is called a nested list
 # Extract and print the second element from the first list
-
+print(sample_list[0][1]) #2
+print(sample_list[1][2]) #6
+print(sample_list[2][0]) #7
+print(sample_list[2][2]) #9
+print(sample_list[0][0]) #1
+print(sample_list[2][1]) #8
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
 # Extract and print the second fruit from the list
-
+print(sample_list_of_fruit["fruits"][1]) #banana
+print(sample_list_of_fruit["fruits"][2]) #cherry
+print(sample_list_of_fruit["fruits"][0]) #apple
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
-
-
+print(sample_list_of_lists["lists"][1][2]) #6
+print(sample_list_of_lists["lists"][2][1]) #8
+print(sample_list_of_lists["lists"][0][2]) #3
+print(sample_list_of_lists["lists"][2][0]) #7
 
 
 sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
-
-
-
+print(sample_list_of_dicts["dicts"][1]["age"]) #30
+print(sample_list_of_dicts["dicts"][2]["name"]) #Charlie
+print(sample_list_of_dicts["dicts"][0]["name"]) #Alice
 
 
 
@@ -162,8 +171,9 @@ data = {
 
 # Extract and print the second item from the 'tropical' list
 print(data["fruits"]["tropical"][1])  # Output: 'pineapple'
-
-
+print(data["fruits"]["berries"][2]) #raspberry
+print(data["prices"]["mango"]) #mango price (1.5)
+print(data["prices"]["banana"]) #banana price (2.5) 
 
 
 # Define the dictionary
@@ -175,8 +185,9 @@ info = {
 
 # Extract and print the coach's name
 print(info["team"]["coach"]["name"])  # Output: 'John Doe'
-
-
+print(info["team"]["coach"]["age"]) #45
+print(info["team"]["players"][2]) #Charlie
+print(info["location"]) #New York
 
 
 # Define the dictionary
@@ -196,7 +207,12 @@ company = {
 
 # Extract and print the second employee from the 'Engineering' department
 print(company["departments"]["Engineering"]["employees"][1])  # Output: 'Noah'
-
+print(company["departments"]["Engineering"]["budget"]) #120000
+#Overall Budget
+budget1 = company["departments"]["HR"]["budget"]
+budget2 = company["departments"]["Engineering"]["budget"]
+overall_budget = budget1 + budget2
+print(overall_budget)
 
 # Define the dictionary
 school = {

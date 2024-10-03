@@ -82,6 +82,7 @@ print()
 # Sets Practice #2
 # Remove a random item from the following set, using set methods.
 # raffle = {"Rachel", "Monica", "Phoebe", "Joey", "Chandler", "Ross"}
+raffle = {"Rachel", "Monica", "Phoebe", "Joey", "Chandler", "Ross"}
 print(raffle.remove("Ross"))
 
 # Sets Practice #3
